@@ -14,7 +14,7 @@ Twój serwer nie chce się uruchomić albo świeżo wgrany plugin lub mod nie dz
 
 ![Logi i crash reporty](img/logi.png)
 
-Każdy plik w folderze **/logs/** zawiera pełny log z danego uruchomienia Twojego serwera. Najważniejszy jest plik **latest.log** (**fml-server-latest.log** na niektórych wersjach Forge) - zawiera on informacji z najnowszej sesji serwera. **Przy każdym uruchomieniu serwera plik ten jest nadpisywany**, a stary log jest pakowany do archiwum **tar.gz** znazwą będącą datą uruchomienia serwera.
+Każdy plik w folderze **/logs/** zawiera pełny log z danego uruchomienia Twojego serwera. Najważniejszy jest plik **latest.log** (**fml-server-latest.log** na niektórych wersjach Forge) - zawiera on informacji z najnowszej sesji serwera. **Przy każdym uruchomieniu serwera plik ten jest nadpisywany**, a stary log jest pakowany do archiwum **tar.gz** z nazwą będącą datą uruchomienia serwera.
 
 Raporty z crashy znajdziesz natomiast w folderze **crash-reports** - ich nazwy opatrzone są datą i godziną crashu. Crash-report zawiera to skróconą wersję logu oraz okoliczności w jakich serwer scrashował.
 
@@ -25,10 +25,10 @@ Raporty z crashy znajdziesz natomiast w folderze **crash-reports** - ich nazwy o
 
 <h3>Czym są logi?</h3>
 
-Log (po polsku "dziennik") jest lista najważniejszych zdarzeń z pojedynczego uruchomienia serwera uporządkowana chronologicznie. Każdy wpis do logu opatrzony jest datą oraz godziną, tak aby łatwo było zlokalizować intesujące nas wydarzenia.
-W pliku dziennika znajdziesz takie informacje jak parametry startowe serwera, ładowanie każdego pojedyńczego modu, pluginu, światów czy zapełnianie ich mobami.
+Log (po polsku "dziennik") jest lista najważniejszych zdarzeń z pojedynczego uruchomienia serwera uporządkowana chronologicznie. Każdy wpis do logu opatrzony jest datą oraz godziną, tak aby łatwo było zlokalizować interesujące nas wydarzenia.
+W pliku dziennika znajdziesz takie informacje jak parametry startowe serwera, ładowanie każdego modu czy pluginu, światów, a nawet ich populację mobami.
 
- Główną cechą logów jest ich czytelność - dobrze skonstruowane mają być zrozumiałem dla przeciętnego administratora niebędącego programistą, dlatego podstawowa znajomość języka angielskiego w połączeniu z Google zazwyczaj są wystarczające.
+Główną cechą logów jest ich czytelność - dobrze skonstruowane mają być zrozumiałem dla przeciętnego administratora niebędącego programistą, dlatego podstawowa znajomość języka angielskiego w połączeniu z Google zazwyczaj są wystarczające.
 
 
  <h5>Przykład 1. Startujący serwer Forge</h5>
@@ -95,7 +95,7 @@ Szukając `ERROR` natriafiamy na:
     [22:50:04] [Server thread/ERROR]: LogBlock-Connection-Pool - Exception during pool initialization.
     com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
 
-Linijka oznaczona tagiem `ERROR` (ostatnia) informuje nasz, że nastąpił wyjątek podczas inicjalizacji puli połączeń, a czytając kilka linijek wyżej dowiadujemy się, że podać danych do bazy MySQL, przez co LogBlock próbował połaczyć się z nią korzystając z przykładowych danych `username@jdbc:mysql://localhost:3306/minecraft`.
+Linijka oznaczona tagiem `ERROR` (ostatnia) informuje nasz, że nastąpił wyjątek podczas inicjalizacji puli połączeń, a czytając kilka linijek wyżej dowiadujemy się, że podać danych do bazy MySQL, przez co LogBlock próbował połączyć się z nią korzystając z przykładowych danych `username@jdbc:mysql://localhost:3306/minecraft`.
 
 <h5>Przykład 4. ERROR - Błędy mapy</h5>
 
